@@ -3,7 +3,6 @@ import { Suspense } from "react";
 import SimpleLoading from "./components/simpleLoading";
 import DashboardClient from "./DashboardClient";
 import { redirect } from "next/navigation";
-import { UserData } from "../utils/AppContext";
 import type { Metadata } from 'next'
 import { useSearchParams } from "next/navigation";
 import MainUniverse from "./components/mainUniverse";
@@ -37,11 +36,10 @@ export default function Dashboard() {
   // const searchParams = useSearchParams();
   // const initialUser = searchParams.get('user');
   // console.log("initialUser", initialUser);
-  const initialUser = {"id":1,"created_at":"2025-02-20T04:07:48.884114+00:00","email":"vanha101096@gmail.com","name":"Minion Van","type":"founder","photo":"https://lh3.googleusercontent.com/a/ACg8ocLpvZKCFXsRyAqki7sk-ak2UifnOIH6oBL6Biz7ROzxGPiUve0U=s96-c","x":"https://x.com/patricksaturnor","github":"https://github.com/vanha777","linkedin":"","website":"","instagram":""};
   return (
     // <Suspense fallback={<SimpleLoading />}>
       // <DashboardClient rawUser={initialUser} />
-      <MainUniverse rawUser={initialUser} />
+      <MainUniverse  />
     // </Suspense>
   );
 }
