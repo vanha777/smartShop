@@ -10,7 +10,7 @@ const SSOLogin = () => {
   const [userType, setUserType] = useState('founder');
   const handleSSOLogin = async (provider: string) => {
     setIsSpinning(true);
-    const redirectUri = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+    const redirectUri = process.env.NEXT_PUBLIC_APP_URL || 'https://smart-shop-chi.vercel.app';
     if (userType === "founder") {
       window.location.href = `https://metaloot-cloud-d4ec.shuttle.app/v1/api/player/oauth/${provider}?redirect_uri=${redirectUri}/dashboard/oauth/callback/founder`;
     } else {
