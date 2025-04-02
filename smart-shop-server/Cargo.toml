@@ -12,3 +12,6 @@ serde = { version = "1.0.148", features = ["derive"] }
 shuttle-rocket = "0.53.0"
 shuttle-runtime = "0.53.0"
 tokio = "1.26.0"
+reqwest = { version = "0.11", features = ["json"] }
+urlencoding = "2.1"
+serde_json = "1.0.84"
